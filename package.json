@@ -1,0 +1,51 @@
+{
+  "name": "graphql-binding-facebook",
+  "version": "0.0.0",
+  "description": "Embed Facebook's Graph API into your GraphQL server application",
+  "main": "src/index.js",
+  "repository": "https://github.com/jtmthf/graphql-binding-facebook.git",
+  "author": "Jack Moore <jtmthf@mst.edu>",
+  "license": "MIT",
+  "scripts": {
+    "precommit": "lint-staged",
+    "test": "jest"
+  },
+  "lint-staged": {
+    ".{js,json,ts,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "/__tests__/.*\\.(ts|js)$",
+    "moduleFileExtensions": [
+      "ts",
+      "js",
+      "json",
+      "node"
+    ],
+    "setupFiles": [
+      "./src/setupTests.ts"
+    ]
+  },
+  "devDependencies": {
+    "@types/jest": "^22.0.1",
+    "@types/nock": "^9.1.1",
+    "@types/node": "^9.3.0",
+    "husky": "^0.14.3",
+    "jest": "^22.0.6",
+    "lint-staged": "^6.0.0",
+    "nock": "^9.1.6",
+    "prettier": "^1.10.2",
+    "ts-jest": "^22.0.1",
+    "tslint": "^5.9.1",
+    "tslint-config-prettier": "^1.6.0",
+    "typescript": "^2.6.2"
+  },
+  "dependencies": {
+    "isomorphic-fetch": "^2.2.1"
+  }
+}
